@@ -59,13 +59,13 @@ const CharactersList = () => {
       <Box
         sx={{
           display: 'flex',
-          // flexDirection: 'column',
-          // alignItems: 'center',
+          flexWrap: 'wrap',
+          justifyContent: 'center'
         }}
       >
         <TextField id="outlined-basic" size="large" style={{ minWidth: '30vw', margin: '20px 3px 3px' }} label="Type to search by name" type="search" onChange={onChangeInput} variant="outlined" />
 
-        <FormControl style={{ minWidth: '10vw', margin: '20px 3px 3px' }}>
+        <FormControl style={{ minWidth: '20vw', margin: '20px 3px 3px' }}>
           <InputLabel id="statusLabel">Status</InputLabel>
           <Select
             labelId="statusLabel"
@@ -81,7 +81,7 @@ const CharactersList = () => {
           </Select>
         </FormControl>
 
-        <FormControl style={{ minWidth: '10vw', margin: '20px 3px 3px' }}>
+        <FormControl style={{ minWidth: '20vw', margin: '20px 3px 3px' }}>
           <InputLabel id="genderLabel">Gender</InputLabel>
           <Select
             labelId="genderLabel"
