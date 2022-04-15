@@ -56,41 +56,48 @@ const CharactersList = () => {
         alignItems: 'center',
       }}
     >
-      <TextField id="outlined-basic" size="large" style={{ width: '50%', margin: '20px 3px 3px' }} label="Type to search by name" type="search" onChange={onChangeInput} variant="outlined" />
+      <Box
+        sx={{
+          display: 'flex',
+          // flexDirection: 'column',
+          // alignItems: 'center',
+        }}
+      >
+        <TextField id="outlined-basic" size="large" style={{ minWidth: '30vw', margin: '20px 3px 3px' }} label="Type to search by name" type="search" onChange={onChangeInput} variant="outlined" />
 
-      <FormControl style={{ width: '50%', margin: '3px' }}>
-        <InputLabel id="statusLabel">Status</InputLabel>
-        <Select
-          labelId="statusLabel"
-          id="status"
-          value={statusInFilter}
-          label="Status"
-          onChange={handleChangeStatus}
-        >
-          <MenuItem value={''} sx={{ color: "text.secondary" }}>No matter</MenuItem>
-          <MenuItem value={'Alive'}>Alive</MenuItem>
-          <MenuItem value={'Dead'}>Dead</MenuItem>
-          <MenuItem value={'unknown'}>unknown</MenuItem>
-        </Select>
-      </FormControl>
+        <FormControl style={{ minWidth: '10vw', margin: '20px 3px 3px' }}>
+          <InputLabel id="statusLabel">Status</InputLabel>
+          <Select
+            labelId="statusLabel"
+            id="status"
+            value={statusInFilter}
+            label="Status"
+            onChange={handleChangeStatus}
+          >
+            <MenuItem value={''} sx={{ color: "text.secondary" }}>No matter</MenuItem>
+            <MenuItem value={'Alive'}>Alive</MenuItem>
+            <MenuItem value={'Dead'}>Dead</MenuItem>
+            <MenuItem value={'unknown'}>unknown</MenuItem>
+          </Select>
+        </FormControl>
 
-      <FormControl style={{ width: '50%', margin: '3px' }}>
-        <InputLabel id="genderLabel">Gender</InputLabel>
-        <Select
-          labelId="genderLabel"
-          id="gender"
-          value={genderInFilter}
-          label="Gender"
-          onChange={handleChangeGender}
-        >
-          <MenuItem value={''} sx={{ color: "text.secondary" }}>No matter</MenuItem>
-          <MenuItem value={'Male'}>Male</MenuItem>
-          <MenuItem value={'Female'}>Female</MenuItem>
-          <MenuItem value={'Genderless'}>Genderless</MenuItem>
-          <MenuItem value={'unknown'}>unknown</MenuItem>
-        </Select>
-      </FormControl>
-
+        <FormControl style={{ minWidth: '10vw', margin: '20px 3px 3px' }}>
+          <InputLabel id="genderLabel">Gender</InputLabel>
+          <Select
+            labelId="genderLabel"
+            id="gender"
+            value={genderInFilter}
+            label="Gender"
+            onChange={handleChangeGender}
+          >
+            <MenuItem value={''} sx={{ color: "text.secondary" }}>No matter</MenuItem>
+            <MenuItem value={'Male'}>Male</MenuItem>
+            <MenuItem value={'Female'}>Female</MenuItem>
+            <MenuItem value={'Genderless'}>Genderless</MenuItem>
+            <MenuItem value={'unknown'}>unknown</MenuItem>
+          </Select>
+        </FormControl>
+      </Box>
       <Box sx={{
         display: 'flex',
         justifyContent: 'center',
